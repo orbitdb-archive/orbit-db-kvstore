@@ -1,5 +1,5 @@
 {
-  "name": "orbit-kvstore",
+  "name": "orbit-db-kvstore",
   "version": "0.0.2",
   "description": "Key-Value Store for orbit-db",
   "main": "src/KeyValueStore.js",
