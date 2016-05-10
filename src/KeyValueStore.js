@@ -18,27 +18,25 @@ class KeyValueStore extends Store {
   }
 
   put(key, data) {
-    const operation = {
+    return this._addOperation({
       op: 'PUT',
       key: key,
       value: data,
       meta: {
         ts: new Date().getTime()
       }
-    };
-    return this._addOperation(operation);
+    });
   }
 
   del(key) {
-    const operation = {
+    return this._addOperation({
       op: 'DEL',
       key: key,
       value: null,
       meta: {
         ts: new Date().getTime()
       }
-    };
-    return this._addOperation(operation);
+    });
   }
 }
 
