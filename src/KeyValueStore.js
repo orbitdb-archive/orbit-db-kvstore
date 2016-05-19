@@ -5,7 +5,8 @@ const KeyValueIndex = require('./KeyValueIndex');
 
 class KeyValueStore extends Store {
   constructor(ipfs, id, dbname, options) {
-    Object.assign(options || {}, { Index: KeyValueIndex });
+    if(!options) options = {};
+    if(!options.Index) Object.assign(options, { Index: KeyValueIndex });
     super(ipfs, id, dbname, options)
   }
 
