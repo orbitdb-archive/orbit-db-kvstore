@@ -9,6 +9,6 @@
   "author": "Haad",
   "license": "MIT",
   "dependencies": {
-    "orbit-db-store": "0.0.15"
+    "orbit-db-store": "0.0.16"
   }
 }
