@@ -1,21 +1,21 @@
-'use strict';
+'use strict'
 
-const Store         = require('orbit-db-store');
-const KeyValueIndex = require('./KeyValueIndex');
+const Store         = require('orbit-db-store')
+const KeyValueIndex = require('./KeyValueIndex')
 
 class KeyValueStore extends Store {
   constructor(ipfs, id, dbname, options) {
-    if(!options) options = {};
-    if(!options.Index) Object.assign(options, { Index: KeyValueIndex });
-    super(ipfs, id, dbname, options)
+    let opts = Object.assign({}, { Index: KeyValueIndex })
+    Object.assign(opts, options)
+    super(ipfs, id, dbname, opts)
   }
 
   get(key) {
-    return this._index.get(key);
+    return this._index.get(key)
   }
 
   set(key, data) {
-    this.put(key, data);
+    this.put(key, data)
   }
 
   put(key, data) {
@@ -26,7 +26,7 @@ class KeyValueStore extends Store {
       meta: {
         ts: new Date().getTime()
       }
-    });
+    })
   }
 
   del(key) {
@@ -37,8 +37,8 @@ class KeyValueStore extends Store {
       meta: {
         ts: new Date().getTime()
       }
-    });
+    })
   }
 }
 
-module.exports = KeyValueStore;
+module.exports = KeyValueStore
