@@ -54,38 +54,7 @@ kv.events.on('ready', () => {
 
 ## API
 
-### kvstore(name)
-
-  Package: 
-  [orbit-db-kvstore](https://github.com/haadcode/orbit-db-kvstore)
-
-  ```javascript
-  const db = orbitdb.kvstore('application.settings')
-  ```
-
-  - **put(key, value)**
-    ```javascript
-    db.put('hello', { name: 'World' }).then(() => ...)
-    ```
-
-  - **set(key, value)**
-    ```javascript
-    db.set('hello', { name: 'Friend' }).then(() => ...)
-    ```
-    
-  - **get(key)**
-    ```javascript
-    const value = db.get('hello')
-    // { name: 'Friend' }
-    ```
-
-  - **events**
-
-    ```javascript
-    db.events.on('data', (dbname, event) => ... )
-    ```
-
-    See [Events](https://github.com/haadcode/orbit-db-store#events) for full description
+See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#kvstorename) for full details.
 
 ## Contributing
 
