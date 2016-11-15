@@ -31,7 +31,7 @@ const ipfs = new IPFS()
 const orbitdb = new OrbitDB(ipfs)
 ```
 
-Get a log database and add an entry to it:
+Get a key-value database and add an entry to it:
 
 ```javascript
 const kv = orbitdb.kvstore('settings')
