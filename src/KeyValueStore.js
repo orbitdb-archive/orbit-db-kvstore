@@ -15,7 +15,7 @@ class KeyValueStore extends Store {
   }
 
   set(key, data) {
-    this.put(key, data)
+    return this.put(key, data)
   }
 
   put(key, data) {
