@@ -35,7 +35,7 @@ Get a key-value database and add an entry to it:
 
 ```javascript
 const kv = orbitdb.kvstore('settings')
-kv.set('volume', '100')
+kv.put('volume', '100')
   .then(() => {
     console.log(kv.get('volume'))
     // 100
