@@ -15,17 +15,14 @@ class KeyValueStore extends Store {
   }
 
   set(key, data) {
-    this.put(key, data)
+    return this.put(key, data)
   }
 
   put(key, data) {
     return this._addOperation({
       op: 'PUT',
       key: key,
-      value: data,
-      meta: {
-        ts: new Date().getTime()
-      }
+      value: data
     })
   }
 
@@ -33,10 +30,7 @@ class KeyValueStore extends Store {
     return this._addOperation({
       op: 'DEL',
       key: key,
-      value: null,
-      meta: {
-        ts: new Date().getTime()
-      }
+      value: null
     })
   }
 }
