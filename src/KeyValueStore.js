@@ -8,6 +8,7 @@ class KeyValueStore extends Store {
     let opts = Object.assign({}, { Index: KeyValueIndex })
     Object.assign(opts, options)
     super(ipfs, id, dbname, opts)
+    this._type = 'keyvalue'
   }
 
   get(key) {

@@ -10,7 +10,7 @@ class KeyValueIndex {
   }
 
   updateIndex(oplog) {
-    oplog.items
+    oplog.values
       .slice()
       .reverse()
       .reduce((handled, item) => {
