@@ -1,6 +1,6 @@
 'use strict'
 
-const Store         = require('orbit-db-store')
+const Store = require('orbit-db-store')
 const KeyValueIndex = require('./KeyValueIndex')
 
 class KeyValueStore extends Store {
@@ -11,15 +11,19 @@ class KeyValueStore extends Store {
     this._type = 'keyvalue'
   }
 
-  get(key) {
+  all () {
+    return this._index._index
+  }
+
+  get (key) {
     return this._index.get(key)
   }
 
-  set(key, data) {
+  set (key, data) {
     return this.put(key, data)
   }
 
-  put(key, data) {
+  put (key, data) {
     return this._addOperation({
       op: 'PUT',
       key: key,
@@ -27,7 +31,7 @@ class KeyValueStore extends Store {
     })
   }
 
-  del(key) {
+  del (key) {
     return this._addOperation({
       op: 'DEL',
       key: key,
