@@ -3,10 +3,27 @@
   "version": "1.4.0",
   "description": "Key-Value Store for orbit-db",
   "main": "src/KeyValueStore.js",
+  "homepage":"https://github.com/orbitdb/orbit-db-kvstore",
+  "bugs":"https://github.com/orbitdb/orbit-db-kvstore/issues",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords":[
+    "orbit-db",
+    "orbitdb",
+    "kv",
+    "key-value",
+    "kv-store"
+  ],
   "author": "Haad",
+  "contributors":[
+    "haadcode",
+    "greenkeeperio-bot",
+    "shamb0t",
+    "RichardLitt",
+    "bshevchenko",
+    "adam-palazzo"
+  ],
   "license": "MIT",
   "dependencies": {
     "orbit-db-store": "github:orbitdb/orbit-db-store"
