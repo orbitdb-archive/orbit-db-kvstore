@@ -1,6 +1,9 @@
 # orbit-db-kvstore
 
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/orbitdb/Lobby)
 [![npm version](https://badge.fury.io/js/orbit-db-kvstore.svg)](https://badge.fury.io/js/orbit-db-kvstore)
+
+> Key-Value database for orbit-db
 
 An append-only log with traversable history. Useful for *"latest N"* use cases or as a message queue.
 
@@ -58,8 +61,10 @@ See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/mas
 
 ## Contributing
 
-See [orbit-db's contributing guideline](https://github.com/haadcode/orbit-db#contributing).
+If you think this could be better, please [open an issue](https://github.com/orbitdb/orbit-db-kvstore/issues/new)!
+
+Please note that all interactions in [@orbitdb](https://github.com/orbitdb) fall under our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-[MIT](LICENSE) ©️ 2016-2018 Protocol Labs Inc., Haja Networks Oy
+[MIT](LICENSE) ©️ 2016-2018 Protocol Labs Inc., 2018 Haja Networks Oy
