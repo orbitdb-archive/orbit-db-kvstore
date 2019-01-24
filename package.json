@@ -26,6 +26,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-store": "github:orbitdb/orbit-db-store"
+    "orbit-db-store": "github:orbitdb/orbit-db-store#feat/backwards-compatible"
   }
 }
