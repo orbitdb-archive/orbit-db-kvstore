@@ -5,7 +5,7 @@
 
 > Key-Value database for orbit-db
 
-An append-only log with traversable history. Useful for *"latest N"* use cases or as a message queue.
+A key-value database just like your favourite key-value database.
 
 Used in [orbit-db](https://github.com/haadcode/orbit-db).
 
