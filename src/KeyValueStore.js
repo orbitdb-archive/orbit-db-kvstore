@@ -11,7 +11,7 @@ class KeyValueStore extends Store {
     this._type = 'keyvalue'
   }
 
-  all () {
+  get all () {
     return this._index._index
   }
 
