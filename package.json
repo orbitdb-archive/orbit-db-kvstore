@@ -26,6 +26,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-store": "rc1"
+    "orbit-db-store": "next"
   }
 }
