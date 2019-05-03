@@ -31,13 +31,13 @@ const IPFS = require('ipfs')
 const OrbitDB = require('orbit-db')
 
 const ipfs = new IPFS()
-const orbitdb = new OrbitDB(ipfs)
+const orbitdb = await OrbitDB.createInstance(ipfs)
 ```
 
 Get a key-value database and add an entry to it:
 
 ```javascript
-const kv = orbitdb.kvstore('settings')
+const kv = await orbitdb.kvstore('settings')
 kv.put('volume', '100')
   .then(() => {
     console.log(kv.get('volume'))
