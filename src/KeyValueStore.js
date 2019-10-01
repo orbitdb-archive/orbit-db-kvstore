@@ -4,10 +4,10 @@ const Store = require('orbit-db-store')
 const KeyValueIndex = require('./KeyValueIndex')
 
 class KeyValueStore extends Store {
-  constructor(ipfs, id, dbname, options) {
+  constructor(ipfs, identities, id, dbname, options) {
     let opts = Object.assign({}, { Index: KeyValueIndex })
     Object.assign(opts, options)
-    super(ipfs, id, dbname, opts)
+    super(ipfs, identities, id, dbname, opts)
     this._type = 'keyvalue'
   }
 
