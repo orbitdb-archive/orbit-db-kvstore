@@ -27,5 +27,10 @@
   "license": "MIT",
   "dependencies": {
     "orbit-db-store": "~2.7.0"
-  }
+  },
+  "localMaintainers": [
+    "haad <haad@haja.io>",
+    "shamb0t <shams@haja.io>",
+    "hajamark <mark@haja.io>"
+  ]
 }
