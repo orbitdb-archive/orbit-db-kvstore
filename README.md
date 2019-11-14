@@ -48,7 +48,7 @@ kv.put('volume', '100')
 Later, when the database contains data, load the history and query when ready:
 
 ```javascript
-const kv = orbitdb.kvstore('settings')
+const kv = await orbitdb.kvstore('settings')
 kv.events.on('ready', () => {
   console.log(kv.get('volume'))
   // 100
