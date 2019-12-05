@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "orbit-db-store": "orbitdb/orbit-db-store#feat/optional-pin"
+    "orbit-db-store": "~3.0.0"
   },
   "localMaintainers": [
     "haad <haad@haja.io>",
