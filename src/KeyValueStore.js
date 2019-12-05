@@ -19,24 +19,24 @@ class KeyValueStore extends Store {
     return this._index.get(key)
   }
 
-  set (key, data) {
-    return this.put(key, data)
+  set (key, data, options = {}) {
+    return this.put(key, data, options)
   }
 
-  put (key, data) {
+  put (key, data, options = {}) {
     return this._addOperation({
       op: 'PUT',
       key: key,
       value: data
-    })
+    }, options)
   }
 
-  del (key) {
+  del (key, options = {}) {
     return this._addOperation({
       op: 'DEL',
       key: key,
       value: null
-    })
+    }, options)
   }
 }
 
