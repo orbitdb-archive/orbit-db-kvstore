@@ -3,6 +3,7 @@
 class KeyValueIndex {
   constructor() {
     this._index = {}
+    this._lastProcessedIdx = 0
   }
 
   get(key) {
@@ -11,9 +12,9 @@ class KeyValueIndex {
 
   updateIndex(oplog) {
     oplog.values
-      .slice()
+      .slice(this._lastProcessedIdx, oplog.values.length)
       .reverse()
-      .reduce((handled, item) => {
+      .reduce((handled, item, idx) => {
         if(!handled.includes(item.payload.key)) {
           handled.push(item.payload.key)
           if(item.payload.op === 'PUT') {
@@ -22,6 +23,7 @@ class KeyValueIndex {
             delete this._index[item.payload.key]
           }
         }
+        this._lastProcessedIdx += idx
         return handled
       }, [])
   }
