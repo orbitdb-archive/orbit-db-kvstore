@@ -26,6 +26,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "interface-datastore": "^0.8.1",
     "orbit-db-store": "~3.1.0"
   },
   "localMaintainers": [
