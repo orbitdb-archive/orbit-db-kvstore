@@ -90,14 +90,13 @@ class KeyValueStore extends Store {
       },
       commit: async () => { // eslint-disable-line require-await
         //Future add support for multiples operations per oplog entry.
-        puts.forEach(v => {
+        for(var v of puts) {
           await this.put(v[0], v[1])
-        })
+        }
         puts = []
-
-        dels.forEach(key => {
+        for(var key of dels) {
           await this.del(key)
-        })
+        }
         dels = []
       }
     }
