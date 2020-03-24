@@ -39,11 +39,24 @@ class KeyValueStore extends Store {
       value: null
     }, options)
   }
-
+  /**
+   * Returns whether a key-value exists with a specific key.
+   * NOTE: In compliance with interface-datastore specifications.
+   * @param {String|Key} key 
+   * @returns {Boolean}
+   */
+  async has(key) {
+    if(this._index._index[key.toString()]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   /**
    * Query datastore via async iterable
-   * NOTE: In compliance with interface-datastore specifications. Backwards compatible (without leading /) orbit-db keyvalues may not work as expected.
+   * NOTE: In compliance with interface-datastore specifications. Backwards compatible (without leading /) orbit-db keyvalues may NOT work as expected.
    * @param {Object} q 
+   * @returns {AsyncIterable}
    */
   query (q) {
     let it = Object.entries(this._index._index)
