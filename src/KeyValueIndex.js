@@ -1,8 +1,10 @@
 'use strict'
 
 class KeyValueIndex {
-  constructor() {
+  constructor(validationFn, store) {
     this._index = {}
+    this._validationFn = validationFn
+    this._store = store
   }
 
   get(key) {
@@ -14,7 +16,7 @@ class KeyValueIndex {
       .slice()
       .reverse()
       .reduce((handled, item) => {
-        if(!handled.includes(item.payload.key)) {
+        if(!handled.includes(item.payload.key) && this._validationFn(item, store)) {
           handled.push(item.payload.key)
           if(item.payload.op === 'PUT') {
             this._index[item.payload.key] = item.payload.value
