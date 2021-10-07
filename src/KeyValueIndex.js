@@ -9,11 +9,22 @@ class KeyValueIndex {
     return this._index[key]
   }
   
+  put(entry) {
+    this._index[entry.payload.key] = item.payload.value  
+  }
+  
+  del(entry) {
+    delete this._index[item.payload.key]
+  }
+  
   applyEntry(entry) {
-    if(item.payload.op === "PUT") {
-      this._index[entry.payload.key] = item.payload.value
-    } else if(item.payload.op === "DEL") {
-      delete this._index[item.payload.key] 
+    switch(entry.payload.op) {
+      case "PUT":
+        this.put(entry)
+        break
+      case "DEL":
+        this.del(entry)
+        break
     }
   }
 
