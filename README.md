@@ -57,7 +57,7 @@ kv.events.on('ready', () => {
 
 ## API
 
-See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#kvstorename) for full details.
+See [orbit-db's API Documentation](https://github.com/haadcode/orbit-db/blob/master/API.md#kvstorename) for full details.
 
 ## Contributing
 
