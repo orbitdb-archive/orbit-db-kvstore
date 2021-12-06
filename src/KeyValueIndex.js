@@ -8,6 +8,25 @@ class KeyValueIndex {
   get(key) {
     return this._index[key]
   }
+  
+  put(entry) {
+    this._index[entry.payload.key] = item.payload.value  
+  }
+  
+  del(entry) {
+    delete this._index[item.payload.key]
+  }
+  
+  applyEntry(entry) {
+    switch(entry.payload.op) {
+      case "PUT":
+        this.put(entry)
+        break
+      case "DEL":
+        this.del(entry)
+        break
+    }
+  }
 
   updateIndex(oplog) {
     oplog.values
@@ -16,11 +35,7 @@ class KeyValueIndex {
       .reduce((handled, item) => {
         if(!handled.includes(item.payload.key)) {
           handled.push(item.payload.key)
-          if(item.payload.op === 'PUT') {
-            this._index[item.payload.key] = item.payload.value
-          } else if(item.payload.op === 'DEL') {
-            delete this._index[item.payload.key]
-          }
+          this.applyEntry(item)
         }
         return handled
       }, [])
