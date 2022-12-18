@@ -1,15 +1,13 @@
-'use strict'
-
-class KeyValueIndex {
-  constructor() {
+export default class KeyValueIndex {
+  constructor () {
     this._index = {}
   }
 
-  get(key) {
+  get (key) {
     return this._index[key]
   }
 
-  updateIndex(oplog) {
+  updateIndex (oplog) {
     const values = oplog.values
 
     const handled = {}
@@ -30,5 +28,3 @@ class KeyValueIndex {
     }
   }
 }
-
-module.exports = KeyValueIndex
