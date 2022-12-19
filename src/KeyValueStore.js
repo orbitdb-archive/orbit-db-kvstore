@@ -1,5 +1,5 @@
 import Store from 'orbit-db-store'
-import KeyValueIndex from './KeyValueIndex'
+import KeyValueIndex from './KeyValueIndex.js'
 
 export default class KeyValueStore extends Store {
   constructor (ipfs, id, dbname, options) {
