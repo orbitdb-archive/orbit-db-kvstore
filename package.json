@@ -2,11 +2,13 @@
   "name": "orbit-db-kvstore",
   "version": "1.12.0",
   "description": "Key-Value Store for orbit-db",
+  "type": "module",
   "main": "src/KeyValueStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-kvstore",
   "bugs": "https://github.com/orbitdb/orbit-db-kvstore/issues",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -30,11 +32,14 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "orbit-db-store": "4.x"
+    "orbit-db-store": "next"
   },
   "localMaintainers": [
     "haad <haad@haja.io>",
     "shamb0t <shams@haja.io>",
     "hajamark <mark@haja.io>"
-  ]
+  ],
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
 }
