@@ -1,6 +1,6 @@
 {
   "name": "orbit-db-kvstore",
-  "version": "1.12.0",
+  "version": "2.0.0",
   "description": "Key-Value Store for orbit-db",
   "type": "module",
   "main": "src/KeyValueStore.js",
@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "orbit-db-store": "next"
+    "orbit-db-store": "*"
   },
   "localMaintainers": [
     "haad <haad@haja.io>",
